@@ -35,17 +35,17 @@ class AddThreeGame:
 
         if ply == "first":
             self.__ply1 = self.__ply1 + x
-            self.__guesses.append(x)#Combines current guess with previous guesses
+            self.__guesses.append(x)#Removes selection
 
         elif ply == "second":
             self.__ply2 = self.__ply2 + x
-            self.__guesses.append(x)#Combines current guess with previous guesses
+            self.__guesses.append(x)#Removes selection
 
-        if self.__ply1 == 15:
-            self.__gamepos = "FIRST_WON" #ply1==15 establishes player 1 as the winner
+        if len(self.__guesses) > 4  and  self.__ply1 == 15:
+            self.__gamepos = "FIRST_WON" #ply1==15 establishes player 1 as the winner after 3 guesses
 
-        elif self.__ply2 == 15:
-            self.__gamepos = "SECOND_WON"#ply2==15 establishes player 2 as the winner
+        elif len(self.__guesses) > 4 and self.__ply2 == 15:
+            self.__gamepos = "SECOND_WON"#ply2==15 establishes player 2 as the winner after 3 guesses
 
         if len(self.__guesses) == 9:#Establishes that is the len of guess == 9 the game will end in a draw
             self.__gamepos = "DRAW"

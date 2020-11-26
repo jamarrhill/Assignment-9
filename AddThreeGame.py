@@ -2,12 +2,14 @@
 # Date: 11/25/2020
 # Description: Assignment 9
 
+
+"""Write a class that allows two players to play a game where they choose numbers 1-9 in trying to select a secret value"""
+
 print("Hello! This game is called the Add Three Game.")
 print("This game allows players to alternately choose numbers from 1-9.")
 print("The goal is to have the sum of their guesses equal a secret value.")
 print("If at any point exactly three of the player's numbers sum to exactly the secret value, then that player has won.")
 print("If all numbers form 1-9 are chosen, but neither player has won, then the game ends in a draw")
-
 
 class AddThreeGame:
 
